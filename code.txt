@@ -1,0 +1,21 @@
+*Setting express
+mkdir rest-express
+npm init -y
+npm i typescript @types/node ts-node ts-node-dev @types/express --save-dev
+npm i express
+tsc --init
+
+outdir dinyalain ditambah ./dist
+lalu ke package.json
+dalam scripts buat:
+"build": "tsc"
+"start": "tsc && node./dist/index.js"
+"dev": "ts-node-dev ./src/index.ts"
+
+buat .gitignore (untuk GitHub agar folder tidak terpush)
+node_modules
+package-lock.json
+dist
+.env
+
+pada folder rest-express buat folder src dan didalam folder src buat file index.ts
