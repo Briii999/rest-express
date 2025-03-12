@@ -4,6 +4,7 @@ import { UserRouter } from "./routers/user.router";
 const PORT: number = 8000;
 
 const app: Application = express();
+app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).send({
